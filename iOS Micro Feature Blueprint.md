@@ -13,11 +13,11 @@ Sebagai *Dependency Inversion* modul ini hanya berisi *public interface* sebagai
 1. untuk library dari cocoapods atau dari luar sebisa mungkin juga lewat dependency inversion.. jadi gak ada yang import library selain di dependency inversion biar suatu saat jika ada perubahan library yang di pake gak rewrite semua code yang menggunakan library tersebut.
 2. harus research API (bukan *network API* tapi tentang *design pattern*) supaya kode jadi konsisten.
 
-####Masalah
+#### Masalah
 
 1. **module cycle** public interface jika butuh model harus import model? soalnya di sebelumnya ada model yang import dependency buat *modelable* takutnya kalau saling import jadi gak bisa build soalnya saling ketergantungan
 
-####Solusi terdekat
+#### Solusi terdekat
 
 1. **module cycle**
    * *model* tidak boleh import *dependency inversion* jadi *dependency inversion* boleh import *model*
@@ -32,11 +32,11 @@ Model disini di bagi 2, model hasil response dari network yang setiap propertiny
 1. **Response Model** model yang berfungsi untuk menerjemahkan data dari server
 2. **Regular Model** model yang berfungsi sebagai representasi dari kumpulan objek
 
-####Masalah
+#### Masalah
 
 1. **penempatan model**: kepikiran untuk menempatkan model di modul *data* tapi jika ada controller lain yang hanya perlu model dan tidak perlu data itu harus import data
 
-####Solusi terdekat
+#### Solusi terdekat
 
 1. **penempatan model**
    * di pisah di jadikan satu modul sendiri
@@ -48,7 +48,7 @@ Model disini di bagi 2, model hasil response dari network yang setiap propertiny
 
 Manipulasi data baik yang dari *network* mapun *local storage* di tempatkan di modul ini.
 
-####Catatan
+#### Catatan
 
 untuk hasil network menggunakan `Result<GenericType>` dan apakah hasil dari local juga menggunakan objek tipe yang sama(?)
 
