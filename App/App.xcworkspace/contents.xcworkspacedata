@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:App.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../mDependency/mDependency.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../mModel/mModel.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../mCore/mCore.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../mData/mData.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../mUI/mUI.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
